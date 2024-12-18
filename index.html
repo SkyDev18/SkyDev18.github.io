@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #003366;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+
+        #container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+            transition: opacity 0.5s;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .sticker {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px auto;
+            overflow: hidden;
+            border-radius: 20px;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-box {
+            width: 250px;
+            height: 250px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: white;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        #nextBtn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #f1c40f;
+            border: none;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 70px; /* Ubah nilai dari 20px menjadi 70px untuk posisi lebih tinggi */
+        }
+
+        #nextBtn:hover {
+            background-color: #f39c12;
+        }
+
+        /* Animasi bintang bergerak dari sudut kanan atas dan kiri atas ke bawah */
+        @keyframes starfall {
+            0% {
+                top: -10px; /* Mulai di luar layar, sedikit di atas */
+                opacity: 1;
+            }
+            100% {
+                top: 100vh; /* Bergerak ke bawah layar */
+                opacity: 0;
+            }
+        }
+
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            border-radius: 50%;
+            animation: starfall linear infinite;
+        }
+
+        /* Bintang dengan ukuran yang lebih besar */
+        .star-large {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Bintang dengan ukuran sedang */
+        .star-medium {
+            width: 8px;
+            height: 8px;
+        }
+
+        /* Bintang dengan ukuran kecil */
+        .star-small {
+            width: 4px;
+            height: 4px;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .gif {
+                width: 120px;
+                height: 120px;
+            }
+
+            .photo-box {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Slide 1 (Text) -->
+        <div class="slide" id="slide1">
+            <h1>Selamat Ulang Tahun!</h1>
+            <p>HAAPYY BRITHDAYY SAYANGGGKUUUUU CINTAKUUUUU💗💗💗</p>
+        </div>
+
+        <!-- Slide 2 hingga Slide 6 (Sticker GIF, Foto, dan Text) -->
+        <div class="slide" id="slide2">
+            <div class="sticker">
+                <img src="1.gif" alt="Sticker" class="gif">
+            </div>
+            <div class="photo-box">
+                <img src="1.jpg" alt="Foto 1">
+            </div>
+            <div class="text">
+                <p>Harii iniii sayangggg ulanggg tahunnn yangg ke 17 tahunnnnnn</p>
+            </div>
+        </div>
+        <div class="slide" id="slide3">
+            <div class="sticker">
+                <img src="1.gif" alt="Sticker" class="gif">
+            </div>
+            <div class="photo-box">
+                <img src="2.jpg" alt="Foto 2">
+            </div>
+            <div class="text">
+                <p>17 tahunn sudahh berlaluu begituu cepatt, dapaaa masiii ingett pass kitaaa pertamaaa bertemuu</p>
+            </div>
+        </div>
+        <div class="slide" id="slide4">
+            <div class="sticker">
+                <img src="1.gif" alt="Sticker" class="gif">
+            </div>
+            <div class="photo-box">
+                <img src="3.jpg" alt="Foto 3">
+            </div>
+            <div class="text">
+                <p>Masaa masaaa indahhh dikantinn, setiapp hariii ngeliatin sayanggg yangggg cantikkkkk imuttttt manissssss aaaaww pokoknyaaa perfect bangett</p>
+            </div>
+        </div>
+        <div class="slide" id="slide5">
+            <div class="sticker">
+                <img src="1.gif" alt="Sticker" class="gif">
+            </div>
+            <div class="photo-box">
+                <img src="4.jpg" alt="Foto 4">
+            </div>
+            <div class="text">
+                <p>Darii harii ituuu hiduppkuuu menjadiii lebihh berwarnaaa, terimakasiii udahh selaluu adaaa buatt dapaaaa, menjadi tempatkuu berbagii sukaaa dan dukaa</p>
+            </div>
+        </div>
+        <div class="slide" id="slide6">
+            <div class="sticker">
+                <img src="1.gif" alt="Sticker" class="gif">
+            </div>
+            <div class="photo-box">
+                <img src="5.jpg" alt="Foto 5">
+            </div>
+            <div class="text">
+                <p>Semogaaa diusiaa 17 tahunn sayangg semakin dewasa, suksess dalammm segalaaa hall, dann tetap orangg yangg luarr biasaa sepertii sekaranggg</p>
+            </div>
+        </div>
+        
+        <!-- Button to go to next slide -->
+        <button id="nextBtn" onclick="nextSlide()">Selanjutnya</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Show the first slide on page load
+        showSlide(currentSlide);
+
+        // Function to show a specific slide
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        // Function to go to the next slide
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0; // Loop back to the first slide
+            }
+            showSlide(currentSlide);
+        }
+
+        // Function to create random falling stars that cover the whole screen
+        function createStars() {
+            const numStars = 500;  // Number of stars for full screen coverage
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const randomType = Math.random();
+                if (randomType > 0.7) {
+                    star.classList.add('star-large');
+                } else if (randomType > 0.3) {
+                    star.classList.add('star-medium');
+                } else {
+                    star.classList.add('star-small');
+                }
+
+                const size = Math.random() * 3 + 2; // Random size between 2px and 5px
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+
+                // Bintang muncul dari sudut kanan atas atau kiri atas
+                if (Math.random() > 0.5) {
+                    star.style.left = `${Math.random() * 50 + 50}%`; // 50-100% (kanan atas)
+                } else {
+                    star.style.left = `${Math.random() * 50}%`; // 0-50% (kiri atas)
+                }
+
+                star.style.top = `${Math.random() * -10}%`;  // Bintang muncul sedikit di atas layar
+
+                // Random animation duration for variation
+                star.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random falling speed
+                star.style.animationDelay = `${Math.random() * 5}s`;  // Random delay
+
+                document.body.appendChild(star);
+            }
+        }
+
+        // Call the createStars function to display stars
+        createStars();
+    </script>
+</body>
+</html>
